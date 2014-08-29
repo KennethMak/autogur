@@ -1,0 +1,9 @@
+<h1>Cars (<%= @cars.length %>)</h1>
+<%= link_to "Add Car", "/cars/new" %>
+
+<% @cars.each do |car| %>
+	<p><%= car.model %>, 
+	   <%= car.manufacturer %>
+	</p>
+	<%= link_to image_tag(car.url), "/cars/#{car.id}" %>
+<% end %>

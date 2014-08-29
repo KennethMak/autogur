@@ -1,0 +1,19 @@
+<h1>Add a Car</h1>
+<%= link_to "Back to Autogur", cars_url %> 
+<%= form_for @car do |c| %>
+	<p>
+		<%= c.label "model" %>
+		<%= c.text_field "model" %>
+	</p>
+	<p>
+		<%= c.label "manufacturer" %>
+		<%= c.text_field "manufacturer" %>
+	</p>
+	<p>
+		<%= c.label"url" %>
+		<%= c.text_field"url" %>
+	</p>
+	<p>
+		<%= c.submit "Submit" %>
+	</p>
+	<% end %>

@@ -1,0 +1,4 @@
+<%= link_to "Back to Autogur", cars_url %> | <%= link_to "Edit", edit_car_path(@car) %> | <%= link_to 'Delete', @car, :confirm => "Are you sure you want to delete this car?", :method => :delete %>
+
+<p><%= @car.model %>, <%= @car.manufacturer %></p>
+<%= image_tag @car.url %>
