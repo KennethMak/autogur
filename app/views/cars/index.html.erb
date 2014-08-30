@@ -7,3 +7,11 @@
 	</p>
 	<%= link_to image_tag(car.url), "/cars/#{car.id}" %>
 <% end %>
+
+<h1>Most recent cars</h1>
+
+<ul>
+  <% @most_recent_cars.each do |car| %>
+    <li><%= car.model %></li>
+  <% end %>
+</ul>

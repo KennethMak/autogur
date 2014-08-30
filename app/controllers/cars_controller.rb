@@ -2,6 +2,7 @@ class CarsController < ApplicationController
 	
 	def index
 		@cars = Car.all
+		@most_recent_cars = Car.most_recent_five
 	end
 
 	def show

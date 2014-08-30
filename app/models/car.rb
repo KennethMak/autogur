@@ -1,7 +1,10 @@
 class Car < ActiveRecord::Base
-end
-# :scope :most_recent_five, -> {order(created_at: :desc).limit(5)}
-# end
 
-# def self.create_before(time)
-# 	where
+  scope :newest_first, -> { order("created_at DESC") }
+  scope :most_recent_five, -> { newest_first.limit(5) }
+  scope :created_before, ->(time) { where("created_at < ?", time) }
+
+	# def self.created_before(time)
+	# 	where("create_at < ?", time)
+	# end
+end
